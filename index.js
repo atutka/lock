@@ -87,7 +87,7 @@ function Auth0Lock (clientID, domain, options) {
   this.$auth0 = new Auth0({
     clientID: this.$options.clientID,
     domain: this.$options.domain,
-    useCordovaSocialPlugins: this.$options.useCordovaSocialPlugins
+    useCordovaSocialPlugins: this.$options.useCordovaSocialPlugins,
     _callback: this.$options._callback
   });
 
