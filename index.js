@@ -78,6 +78,7 @@ function Auth0Lock (clientID, domain, options) {
   // Save clientID and domain in $options
   this.$options.clientID = clientID;
   this.$options.domain = domain;
+  this.$options._callback = options._callback;
 
   // Holds copy for all suppported strategies
   this.$strategies = strategies;
@@ -87,6 +88,7 @@ function Auth0Lock (clientID, domain, options) {
     clientID: this.$options.clientID,
     domain: this.$options.domain,
     useCordovaSocialPlugins: this.$options.useCordovaSocialPlugins
+    _callback: this.$options._callback
   });
 
   // use domain as assetsUrl if no assetsUrl provided
